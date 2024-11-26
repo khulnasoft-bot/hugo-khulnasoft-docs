@@ -1,6 +1,6 @@
-# Khulnasoft Docs Theme
+# KhulnaSoft Docs Theme
 
-This repo contains the assets shared between Khulnasoft Docs projects.
+This repo contains the assets shared between KhulnaSoft Docs projects.
 At its core it is the theme resources, and shared code used by the build process.
 
 ## Usage
