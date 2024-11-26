@@ -1,0 +1,94 @@
+<style>
+
+  /* These !important rules are necessary to override inline color and font-size attrs on elements generated from Marketo */
+  .newsletter form {
+    color: #646567 !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    width: 100% !important;
+  }
+
+  .newsletter form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    padding: 0;
+  }
+  
+  .newsletter input[type="Email"], .mktoForm.mktoHasWidth.mktoLayoutLeft .mktoButtonWrap.mktoSimple .mktoButton {
+    border-radius: 3px;
+    font: inherit;
+    line-height: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  
+  .newsletter input[type="Email"] {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: initial;
+    margin: 0;
+    margin-right: .5em;
+    padding-left: .8em;
+    padding-right: .8em;
+    /* This !important is necessary to override inline width attrs on elements generated from Marketo */
+    width: 100% !important;
+  }
+  
+  .newsletter input[type="Email"]:focus {
+    border: 1px solid #3279b3;
+  }
+  
+  .mktoForm.mktoHasWidth.mktoLayoutLeft .mktoButtonWrap.mktoSimple .mktoButton {
+    background-color: #f18030;
+    border: 1px solid #f18030;
+    color: #fff;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+
+  .mktoForm.mktoHasWidth.mktoLayoutLeft .mktoButtonWrap.mktoSimple .mktoButton:active {
+    /* Setting background instead of background-color to overwrite marketo's background-image default */
+    background: #f18030;
+  }
+
+  .mktoForm .mktoButtonWrap.mktoSimple .mktoButton:hover {
+    border: 1px solid #f18030;
+  }
+  
+  .newsletter .privacy-link {
+    font-size: .8em;
+  }
+  
+  .mktoAsterix, .mktoGutter, .mktoLabel, .mktoOffset {
+    display: none;
+  }
+  
+  .mktoButtonWrap, .mktoFieldDescriptor {
+    /* This !important is necessary to override inline margin attrs on elements generated from Marketo */
+    margin: 0 !important;
+  }
+
+  .newsletter .mktoForm .mktoButtonRow {
+    margin-left: .5em;
+  }
+
+  .mktoFormRow:first-of-type, .mktoFormRow:first-of-type .mktoFieldDescriptor.mktoFormCol, .mktoFormRow:first-of-type .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.mktoRequiredField {
+    width: 100%;
+  }
+
+</style>
+
+<div class="newsletter">
+  <script src="https://app-ab13.marketo.com/js/forms2/js/forms2.min.js"></script>
+  <form id="mktoForm_1654"></form>
+  <script>MktoForms2.loadForm("https://app-ab13.marketo.com", "713-XSC-918", 1654, function(form) {
+      form.onSuccess(function() {
+        mktoForm_1654.innerHTML = "Thank you! Your email has been added to our list."
+        return false
+      })
+    });</script>
+  <a class="privacy-link" href="https://www.khulnasoft.com/privacypolicy/">Your privacy is important to us</a>
+</div>
